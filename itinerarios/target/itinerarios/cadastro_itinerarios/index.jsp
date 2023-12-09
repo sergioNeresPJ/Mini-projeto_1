@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Itinerário</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/cadastro_itinerarios.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <script>
         // Função para incluir o cabeçalho na página
         $(document).ready(function () {
-            $("#header-placeholder").load("../header/header.html");
+            $("#header-placeholder").load("itinerarios/header/header.jsp");
         });
 
 
