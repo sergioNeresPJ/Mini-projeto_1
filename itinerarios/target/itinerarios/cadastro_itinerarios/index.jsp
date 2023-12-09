@@ -50,15 +50,15 @@
     <!-- Formulário de cadastro -->
     <section>
         <article>
-            <h1>Cadastro de Itinerário</h1>
+            <h1>Cadastro de Itinerario</h1>
             <form>
                 <!-- Campo para o nome do itinerário -->
-                <label for="nome">Nome do Itinerário:</label>
+                <label for="nome">Nome do Itinerario:</label>
                 <input type="text" id="nome" name="nome" required>
                 <br>
 
                 <!-- Campo para a região -->
-                <label for="regiao">Região:</label>
+                <label for="regiao">Regiao:</label>
                 <input type="text" id="regiao" name="regiao" required>
                 <br>
 
@@ -66,7 +66,7 @@
                 <label for="parada">Paradas:</label>
                 <div id="containerParadas">
                     <div class="parada-container">
-                        <input type="text" class="parada" placeholder="Ex: Av. Barão de Tatuí">
+                        <input type="text" class="parada" placeholder="Ex: Av. Barao de Tatui">
                     </div>
                 </div>
                 <!-- Ícone para adicionar parada -->
@@ -75,7 +75,7 @@
 
 
                 <!-- Botão para cadastrar -->
-                <button class="submit" type="button" onclick="exibirDadosFormulario()">Cadastrar Itinerário</button>
+                <button class="submit" type="button" onclick="exibirDadosFormulario()">Cadastrar Itinerario</button>
             </form>
 
         </article>

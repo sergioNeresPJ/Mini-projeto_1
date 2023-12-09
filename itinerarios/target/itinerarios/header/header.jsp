@@ -88,22 +88,22 @@
                 <li>
                     <a href="#">Rotas</a>
                     <ul class="submenu">
-                        <li><a href="../index.jsp" target="_blank">Itinerários</a></li>
-                        <li><a href="cadastro_itinerarios" target="_blank">Cadastro de Itinerários</a>
+                        <li><a href="../index.jsp" target="_blank">Itinerarios</a></li>
+                        <li><a href="cadastro_itinerarios" target="_blank">Cadastro de Itinerarios</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Cartões</a>
+                    <a href="#">Cartoes</a>
                     <ul class="submenu">
-                        <li><a href="#">Cartão Unitário</a></li>
+                        <li><a href="#">Cartao Unitario</a></li>
                         <li><a href="#">Vale Transporte</a></li>
-                        <li><a href="#">Cartão Cidadão</a></li>
-                        <li><a href="#">Cartão Sênior</a></li>
-                        <li><a href="#">Cartão Estudante</a></li>
+                        <li><a href="#">Cartao Cidadao</a></li>
+                        <li><a href="#">Cartao Senior</a></li>
+                        <li><a href="#">Cartao Estudante</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Transparência</a></li>
+                <li><a href="#">Transparencia</a></li>
                 <li><a href="#">Fale Conosco</a></li>
             </ul>
         </nav>
