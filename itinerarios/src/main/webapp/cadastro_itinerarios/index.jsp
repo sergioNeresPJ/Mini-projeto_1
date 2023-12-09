@@ -16,7 +16,7 @@
     <script>
         // Função para incluir o cabeçalho na página
         $(document).ready(function () {
-            $("#header-placeholder").load("itinerarios/header/header.jsp");
+            $("#header-placeholder").load("../header/header.jsp");
         });
 
 

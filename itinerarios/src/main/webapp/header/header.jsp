@@ -84,12 +84,12 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="itinerarios/index.jsp" target="_blank">Home</a></li>
+                <li><a href="../index.jsp" target="_blank">Home</a></li>
                 <li>
                     <a href="#">Rotas</a>
                     <ul class="submenu">
-                        <li><a href="itinerarios/index.jsp" target="_blank">Itinerários</a></li>
-                        <li><a href="itinerarios/cadastro_itinerarios/index.jsp" target="_blank">Cadastro de Itinerários</a>
+                        <li><a href="../index.jsp" target="_blank">Itinerários</a></li>
+                        <li><a href="cadastro_itinerarios" target="_blank">Cadastro de Itinerários</a>
                         </li>
                     </ul>
                 </li>
