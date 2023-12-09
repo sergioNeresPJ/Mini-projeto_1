@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+  <ITINERARIO>
+    <NOME>69 - Vila Universitaria</NOME>
+    <REGIAO>ITINGA</REGIAO>
+    <PARADA>Av. Ponto 1</PARADA>
+    <PARADA>Av. Ponto 2</PARADA>
+    <PARADA>Av. Ponto 3</PARADA>
+  </ITINERARIO>
+  <ITINERARIO>
+    <NOME>42 - Centro Comercial</NOME>
+    <REGIAO>CENTRO</REGIAO>
+    <PARADA>Rua Principal 1</PARADA>
+    <PARADA>Rua Principal 2</PARADA>
+    <PARADA>Rua Principal 3</PARADA>
+  </ITINERARIO>
+  <ITINERARIO>
+    <NOME>25 - Bairro Residencial</NOME>
+    <REGIAO>RESIDENCIAL</REGIAO>
+    <PARADA>Alameda A 1</PARADA>
+    <PARADA>Alameda A 2</PARADA>
+    <PARADA>Alameda A 3</PARADA>
+  </ITINERARIO>
+</CATALOG>

@@ -19,7 +19,7 @@
             $("#header-placeholder").load("../header/header.jsp");
         });
 
-
+        let qtdParadas = 0;
         // Função para adicionar campo de parada
         function adicionarCampoParada() {
             var containerParadas = document.getElementById("containerParadas");
@@ -30,8 +30,9 @@
 
             var inputParada = document.createElement("input");
             inputParada.type = "text";
-            inputParada.className = "parada";
+            inputParada.className = "input-parada";
             inputParada.placeholder = "Ex: Av. Bandeirantes";
+            inputParada.name = `parada${qtdParadas}`
 
             var botaoRemover = document.createElement("button");
             botaoRemover.type = "button";
@@ -44,6 +45,8 @@
             novoCampo.appendChild(botaoRemover);
 
             containerParadas.appendChild(novoCampo);
+
+            qtdParadas++;
         }
     </script>
 
@@ -66,7 +69,7 @@
                 <label for="parada">Paradas:</label>
                 <div id="containerParadas">
                     <div class="parada-container">
-                        <input type="text" class="parada" placeholder="Ex: Av. Barao de Tatui">
+                        <input type="text" class="input-parada" placeholder="Ex: Av. Barao de Tatui">
                     </div>
                 </div>
                 <!-- Ícone para adicionar parada -->
@@ -75,12 +78,12 @@
 
 
                 <!-- Botão para cadastrar -->
-                <button class="submit" type="button" onclick="exibirDadosFormulario()">Cadastrar Itinerario</button>
+                <button class="submit" type="button">Cadastrar Itinerario</button>
             </form>
 
         </article>
     </section>
-
+    <script src="../ajax_card.js"></script>
 </body>
 
 </html>
