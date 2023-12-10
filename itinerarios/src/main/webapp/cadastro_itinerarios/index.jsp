@@ -78,7 +78,7 @@
 
 
                 <!-- Botão para cadastrar -->
-                <button class="submit" type="button">Cadastrar Itinerario</button>
+                <button class="submit" type="button" onclick="postItinerario()">Cadastrar Itinerario</button>
             </form>
 
         </article>

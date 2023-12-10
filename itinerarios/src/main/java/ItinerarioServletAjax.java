@@ -1,6 +1,8 @@
 import java.io.IOException;
+import java.util.ArrayList;
 // import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,28 +18,27 @@ public class ItinerarioServletAjax extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nome = request.getParameter("nome");
 		String regiao = request.getParameter("regiao");
-		String[] paradas = new String[0];
+		ArrayList<String> paradas = new ArrayList<>();
 
 		System.out.println(request);
 
 		Enumeration<String> parameterNames = request.getParameterNames();
 
 		// Itera sobre os nomes de parâmetros
+		int i = 0;
+		String paramName;
+
 		while (parameterNames.hasMoreElements()) {
-			String paramName = parameterNames.nextElement();
+			paramName = parameterNames.nextElement();
 
 			if (paramName.startsWith("parada")) {
-				paradas = request.getParameterValues(paramName);
-
-				for (String paramValue : paradas) {
-						System.out.println("Nome do parâmetro: " + paramName + ", Valor: " + paramValue);
-				}
+				System.out.println(paramName);
+				paradas.add(request.getParameter(paramName));
+				System.out.println("Nome do parametro: " + paramName + ", Valor: " + paradas.get(i));
+				i++;
 			}
 		}
 
-		System.out.println(nome);
-		System.out.println(regiao);
-		for(int i = 0; i < paradas.length; i++)
-			System.out.println(paradas[i]);
+		
 	}
 }

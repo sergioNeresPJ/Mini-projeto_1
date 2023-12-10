@@ -50,7 +50,7 @@ function postItinerario() {
       else console.log("Não foi! :C", ajax.readyState, ajax.status)
     }
 
-    url = "itinerarioservletajax?"+data;
+    url = "/itinerarios/itinerarioservletajax?"+data;
     ajax.open("GET", url, true);
     ajax.send(null);
   }
