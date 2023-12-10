@@ -22,18 +22,25 @@ function xmlCard(xml) {
   const xmlDoc = xml.responseXML;
   const data = xmlDoc.getElementsByTagName("ITINERARIO");
 
+  // Ordenar itinerários com base no número de usos (maior para menor)
+  const dataOrdenada = Array.from(data).sort((a, b) => {
+    const usosA = parseInt(a.getElementsByTagName("USO")[0].textContent);
+    const usosB = parseInt(b.getElementsByTagName("USO")[0].textContent);
+    return usosB - usosA;
+  });
+
   const elementoHTML = document.querySelector("#conteudo-dinamico");
   console.log(elementoHTML);
 
   // Criar uma string HTML para armazenar os cards
   let htmlString = "";
 
-  for (let i = 0; i < Math.min(data.length, 8); i++) {
-    const nome = data[i].getElementsByTagName("NOME")[0].childNodes[0].nodeValue;
-    const regiao = data[i].getElementsByTagName("REGIAO")[0].childNodes[0].nodeValue;
+  for (let i = 0; i < dataOrdenada.length; i++) {
+    const nome = dataOrdenada[i].getElementsByTagName("NOME")[0].childNodes[0].nodeValue;
+    const regiao = dataOrdenada[i].getElementsByTagName("REGIAO")[0].childNodes[0].nodeValue;
 
     // Obter todas as paradas do itinerário
-    const paradasNodes = data[i].getElementsByTagName("PARADA");
+    const paradasNodes = dataOrdenada[i].getElementsByTagName("PARADA");
 
     let paradas = "";
 
@@ -51,8 +58,6 @@ function xmlCard(xml) {
       </div>
     </div>
   `;
-
-  
 
     // Adicionar o HTML do card à string
     htmlString += card;
@@ -74,7 +79,7 @@ function filtrarItinerarios() {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    const nomeItinerario = card.querySelector(".card-title").innerText.toLowerCase();
+    const nomeItinerario = card.querySelector(".card-text").innerText.toLowerCase();
 
     if (nomeItinerario.includes(termoPesquisa)) {
       card.style.display = "block";

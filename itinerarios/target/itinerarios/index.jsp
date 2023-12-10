@@ -32,6 +32,8 @@
         <!-- O conteúdo dinâmico vai aqui -->
     </div>
 
+    
+
     <script src="./ajax_card.js"></script>
 </body>
 </html>
