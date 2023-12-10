@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 // import java.io.PrintWriter;
 import java.util.Enumeration;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,6 +38,11 @@ public class ItinerarioServletAjax extends HttpServlet {
 			}
 		}
 
+		System.out.println("Nome: " + nome);
+		System.out.println("Regiao: "+ regiao);
+
+		for (i = 0; i < paradas.size(); i++) 
+			System.out.println("Parada " + i + ": " + paradas.get(i));
 		
 	}
 }
