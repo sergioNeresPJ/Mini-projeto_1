@@ -23,7 +23,7 @@ function xmlCard(xml) {
   const data = xmlDoc.getElementsByTagName("ITINERARIO");
 
   const elementoHTML = document.querySelector("#conteudo-dinamico");
-  console.log(elementoHTML)
+  console.log(elementoHTML);
 
   // Criar uma string HTML para armazenar os cards
   let htmlString = "";
@@ -44,7 +44,7 @@ function xmlCard(xml) {
     }
 
     const card = `
-    <div class="card col">
+    <div class="card col itinerario-card">
       <div class="card-body">
         <h5 class="card-title">${nome}</h5>
         <p class="card-text">Região: ${regiao} <br> Paradas: ${paradas}</p>
@@ -52,6 +52,7 @@ function xmlCard(xml) {
     </div>
   `;
 
+  
 
     // Adicionar o HTML do card à string
     htmlString += card;
@@ -61,39 +62,24 @@ function xmlCard(xml) {
   elementoHTML.innerHTML = htmlString;
 
   console.log("Cards adicionados com sucesso!");
+
+  // Adicione a chamada da função de filtragem após carregar os itinerários
+  filtrarItinerarios();
 }
 
+function filtrarItinerarios() {
+  const input = document.getElementById("searchInput");
+  const termoPesquisa = input.value.toLowerCase();
 
+  const cards = document.querySelectorAll(".card");
 
-function postItinerario() {
-  ajax = initAjax();
-  let data;
+  cards.forEach(card => {
+    const nomeItinerario = card.querySelector(".card-title").innerText.toLowerCase();
 
-  console.log("entrei na funcao")
-
-  data = "nome=" + document.getElementById("nome").value + "&";
-  data += "regiao=" + document.getElementById("regiao").value + "&";
-  const pado = document.querySelectorAll(".input-parada");
-
-  pado.forEach((element, i) => {
-    data += `parada${i}=` + element.value
-    if (i !== pado.length - 1) data += "&";
-  });
-
-  console.log("DATA: " + data)
-
-  if (ajax) {
-    console.log("entrei no if")
-    console.log(ajax);
-
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState == 4 && ajax.status == 200)
-        console.log("Foi!")
-      else console.log("Não foi! :C", ajax.readyState, ajax.status)
+    if (nomeItinerario.includes(termoPesquisa)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
     }
-
-    url = "/itinerarios/itinerarioservletajax?" + data;
-    ajax.open("GET", url, true);
-    ajax.send(null);
-  }
+  });
 }
