@@ -41,12 +41,14 @@ function exibirResultado(responseText) {
     // Iterar sobre os resultados e criar cards para exibição
     resultados.forEach(function (resultado) {
       const cardHTML = `
-        <div class="card col itinerario-card">
-          <div class="card-body">
-            <h5 class="card-title">${resultado.nome}</h5>
-            <p class="card-text">Região: ${resultado.regiao} <br> Paradas: ${resultado.paradas}</p>
-          </div>
+      <div class="itinerario-card">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">${resultado.nome}</h5>
+          <p class="card-text">Região: ${resultado.regiao} <br> Paradas: ${resultado.paradas}</p>
         </div>
+      </div>
+    </div>
         `;
 
       // Adicionar o card ao conteúdo dinâmico

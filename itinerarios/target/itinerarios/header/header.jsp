@@ -17,6 +17,8 @@
             background-color: #69aa6f;
             color: #fff;
             padding: 10px;
+            position:sticky;
+            z-index: 5;
         }
 
         nav {

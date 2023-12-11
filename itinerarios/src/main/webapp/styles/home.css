@@ -1,33 +1,72 @@
 /* Estilos para os cards */
+.itinerario-card {
+  box-sizing: border-box;
+  margin: 10px;
+  float: left;
+  width: 100%;
+  /* Padrão para telas pequenas (coluna única) */
+}
+
+@media (min-width: 576px) {
+  .itinerario-card {
+    width: 50%;
+    /* Duas colunas para telas médias */
+  }
+}
+
+@media (min-width: 768px) {
+  .itinerario-card {
+    width: 25%;
+    /* Quatro colunas para telas maiores */
+  }
+}
+
 .card {
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card-body {
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-text {
-    font-size: 1em;
-  }
-  
-  /* Estilos para o conteúdo dinâmico */
-  #conteudo-dinamico {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1em;
+}
+
+#conteudo-dinamico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Adiciona um espaço uniforme ao redor dos cards */
+}
+
+/* Estilo padrão para a caixa de pesquisa */
+#searchInput {
+  padding: 15px; /* Preenchimento interno aumentado */
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px auto; /* Centraliza a caixa de pesquisa */
+  width: 200px;
+  box-sizing: border-box;
+}
+
+/* Estilo para realçar a caixa de pesquisa quando em foco */
+#searchInput:focus {
+  outline: none;
+  border-color: #007bff; /* Cor para realçar quando em foco */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave quando em foco */
+}
