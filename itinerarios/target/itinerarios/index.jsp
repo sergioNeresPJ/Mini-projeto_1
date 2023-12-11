@@ -19,13 +19,12 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // Chama a função para carregar os primeiros 8 itinerários ao carregar a página
             getItinerarios();
         });
     </script>
 
     <!-- Adicione este input para pesquisa -->
-    <input type="text" id="searchInput" oninput="filtrarItinerarios()" placeholder="Pesquisar por região...">
+    <input type="text" id="searchInput" oninput="getItinerarios()" placeholder="Pesquisar por região...">
     
 
     <div id="conteudo-dinamico" class="row row-cols-2">
