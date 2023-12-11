@@ -57,15 +57,15 @@
             <form>
                 <!-- Campo para o nome do itinerário -->
                 <label for="nome">Nome do Itinerario:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Ex: 80 - UFSCar"required maxlength="50">
                 <br>
 
                 <!-- Campo para a região -->
-                <label for="regiao">Regiao:</label>
-                <input type="text" id="regiao" name="regiao" required>
+                <label for="regiao">Região:</label>
+                <input type="text" id="regiao" name="regiao" placeholder="Ex: UFSCar"required maxlength="50">
                 <br>
 
-
+                <!-- Campo para paradas -->
                 <label for="parada">Paradas:</label>
                 <div id="containerParadas">
                     <div class="parada-container">
@@ -75,7 +75,6 @@
                 <!-- Ícone para adicionar parada -->
                 <i class="bi bi-plus-circle" fill="currentColor" onclick="adicionarCampoParada()"></i>
                 <br>
-
 
                 <!-- Botão para cadastrar -->
                 <button class="submit" type="button" onclick="postItinerario()">Cadastrar Itinerario</button>

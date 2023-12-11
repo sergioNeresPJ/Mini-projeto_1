@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+<ITINERARIO>
+    <NOME>69 - Vila Universitaria</NOME>
+    <REGIAO>ITINGA</REGIAO>
+    <PARADA>Av. Ponto 1</PARADA>
+    <PARADA>Av. Ponto 2</PARADA>
+    <PARADA>Av. Ponto 3</PARADA>
+    <USO>500</USO>
+  </ITINERARIO>
+  <ITINERARIO>
+    <NOME>42 - Centro Comercial</NOME>
+    <REGIAO>CENTRO</REGIAO>
+    <PARADA>Rua Principal 1</PARADA>
+    <PARADA>Rua Principal 2</PARADA>
+    <PARADA>Rua Principal 3</PARADA>
+    <USO>550</USO>
+  </ITINERARIO>
+  <ITINERARIO>
+    <NOME>25 - Bairro Residencial</NOME>
+    <REGIAO>RESIDENCIAL</REGIAO>
+    <PARADA>Alameda A 1</PARADA>
+    <PARADA>Alameda A 2</PARADA>
+    <PARADA>Alameda A 3</PARADA>
+    <USO>450</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>80 - UFSCAR</NOME>
+    <REGIAO>UFSCAR</REGIAO>
+    <PARADA>Rod. Principal 1</PARADA>
+    <PARADA>Rod. Principal 2</PARADA>
+    <PARADA>Rod. Principal 3</PARADA>
+    <USO>800</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>77 - Santa Barbara</NOME>
+    <REGIAO>RESIDENCIAL</REGIAO>
+    <PARADA>Alameda B 1</PARADA>
+    <PARADA>Alameda B 2</PARADA>
+    <PARADA>Alameda B 3</PARADA>
+    <USO>300</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>40 - Vila Jardini</NOME>
+    <REGIAO>JARDIM AMERICA</REGIAO>
+    <PARADA>Rua Principal 4</PARADA>
+    <PARADA>Rua Principal 5</PARADA>
+    <PARADA>Rua Principal 6</PARADA>
+    <USO>1000</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>58 - Sorocaba Park</NOME>
+    <REGIAO>CENTRO</REGIAO>
+    <PARADA>Av. Principal 1</PARADA>
+    <PARADA>Av. Principal 2</PARADA>
+    <PARADA>Av. Principal 3</PARADA>
+    <USO>900</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>170 - Nova Sorocaba</NOME>
+    <REGIAO>RESIDENCIAL</REGIAO>
+    <PARADA>Alameda A 1</PARADA>
+    <PARADA>Alameda A 2</PARADA>
+    <PARADA>Alameda A 3</PARADA>
+    <USO>200</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>21 - Lopes de Oliveira</NOME>
+    <REGIAO>JACUTINGA</REGIAO>
+    <PARADA>Av. Ponto 4</PARADA>
+    <PARADA>Av. Ponto 5</PARADA>
+    <PARADA>Av. Ponto 6</PARADA>
+    <USO>150</USO>
+  </ITINERARIO>
+<ITINERARIO>
+    <NOME>25 - Itavuvu</NOME>
+    <REGIAO>ITINGA</REGIAO>
+    <PARADA>Av. Ponto 1</PARADA>
+    <PARADA>Av. Ponto 2</PARADA>
+    <PARADA>Av. Ponto 3</PARADA>
+    <USO>650</USO>
+</ITINERARIO>
+</CATALOG>

@@ -25,7 +25,7 @@
     </script>
 
     <!-- Adicione este input para pesquisa -->
-    <input type="text" id="searchInput" oninput="filtrarItinerarios()" placeholder="Pesquisar por nome...">
+    <input type="text" id="searchInput" oninput="filtrarItinerarios()" placeholder="Pesquisar por região...">
     
 
     <div id="conteudo-dinamico" class="row row-cols-2">
