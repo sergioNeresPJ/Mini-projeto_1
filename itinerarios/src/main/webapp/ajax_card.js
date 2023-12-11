@@ -2,6 +2,33 @@ function initAjax() {
   return new XMLHttpRequest();
 }
 
+function postItinerario() {
+  let data = {
+    nome: $("#nome").val(),
+    regiao: $("#regiao").val(),
+    paradas: $(".input-parada").map(function() {
+      return $(this).val();
+    }).get()
+  };
+
+  console.log("DATA: " + JSON.stringify(data));
+
+  $.ajax({
+    type: "POST",
+    url: "/itinerarios/postitinerario",
+    data: data,
+    success: function(response) {
+      // O código aqui será executado em caso de sucesso
+      console.log("Request successful!");
+    },
+    error: function(xhr, status, error) {
+      // O código aqui será executado em caso de erro
+      console.log("Error: " + xhr.status + " - " + error);
+    }
+  });
+}
+
+
 function getItinerarios() {
   const searchTerm = document.getElementById("searchInput").value;
 
@@ -16,8 +43,8 @@ function getItinerarios() {
     console.error("Erro ao se comunicar com o servlet.");
   };
 
-  // Configurar a solicitação POST para o servlet
-  xhttp.open("POST", "itinerarioservletajax?regiao=" + encodeURIComponent(searchTerm), true);
+  // Configurar a solicitação para o servlet
+  xhttp.open("POST", "getitinerario?regiao=" + encodeURIComponent(searchTerm), true);
   xhttp.send();
 }
 

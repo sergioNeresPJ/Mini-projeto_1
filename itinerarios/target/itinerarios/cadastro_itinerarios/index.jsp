@@ -7,6 +7,7 @@
     <title>Cadastro de Itinerário</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../styles/cadastro_itinerarios.css">
+
 </head>
 
 <body>
@@ -61,7 +62,7 @@
                 <br>
 
                 <!-- Campo para a região -->
-                <label for="regiao">Região:</label>
+                <label for="regiao">Regiao:</label>
                 <input type="text" id="regiao" name="regiao" placeholder="Ex: UFSCar"required maxlength="50">
                 <br>
 

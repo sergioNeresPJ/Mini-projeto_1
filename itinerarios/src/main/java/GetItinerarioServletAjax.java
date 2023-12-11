@@ -15,8 +15,8 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-@WebServlet("/itinerarioservletajax")
-public class ItinerarioServletAjax extends HttpServlet {
+@WebServlet("/getitinerario")
+public class GetItinerarioServletAjax extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
