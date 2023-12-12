@@ -2,30 +2,63 @@ function initAjax() {
   return new XMLHttpRequest();
 }
 
+// function postItinerario() {
+//   let data = {
+//     nome: $("#nome").val(),
+//     regiao: $("#regiao").val(),
+//     paradas: $(".input-parada").map(function() {
+//       return $(this).val();
+//     }).get()
+//   };
+
+//   console.log("DATA: " + JSON.stringify(data));
+
+//   $.ajax({
+//     type: "POST",
+//     url: "/itinerarios/postitinerario",
+//     data: data,
+//     success: function(response) {
+//       // O código aqui será executado em caso de sucesso
+//       console.log("Request successful!");
+//     },
+//     error: function(xhr, status, error) {
+//       // O código aqui será executado em caso de erro
+//       console.log("Error: " + xhr.status + " - " + error);
+//     }
+//   });
+// }
+
 function postItinerario() {
-  let data = {
-    nome: $("#nome").val(),
-    regiao: $("#regiao").val(),
-    paradas: $(".input-parada").map(function() {
-      return $(this).val();
-    }).get()
-  };
+  ajax = initAjax();
+  let data;
 
-  console.log("DATA: " + JSON.stringify(data));
+  console.log("entrei na funcao")
 
-  $.ajax({
-    type: "POST",
-    url: "/itinerarios/postitinerario",
-    data: data,
-    success: function(response) {
-      // O código aqui será executado em caso de sucesso
-      console.log("Request successful!");
-    },
-    error: function(xhr, status, error) {
-      // O código aqui será executado em caso de erro
-      console.log("Error: " + xhr.status + " - " + error);
-    }
+  data = "nome=" + document.getElementById("nome").value + "&";
+  data += "regiao=" + document.getElementById("regiao").value + "&";
+  const pado = document.querySelectorAll(".input-parada");
+
+  pado.forEach((element, i) => {
+    data += `parada${i}=` + element.value
+    if (i !== pado.length - 1) data += "&";
   });
+
+  console.log("DATA: " + data)
+
+  if (ajax) {
+    console.log("entrei no if")
+    console.log(ajax);
+
+    ajax.onreadystatechange = function () {
+      if (ajax.readyState == 4 && ajax.status == 200)
+        console.log("Foi!")
+      else console.log("Não foi! :C", ajax.readyState, ajax.status)
+    }
+
+    url = "/itinerarios/postitinerario?"+data;
+    ajax.open("GET", url, true);
+    ajax.send(null);
+  }
 }
 
 
